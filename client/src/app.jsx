@@ -22,7 +22,6 @@ export class App extends React.Component {
         },
       })
       .then(res => {
-        console.log(res);
         const data = {};
         res.data.map(elem => {
           data[elem.courseId] = elem.reviews;
@@ -30,7 +29,7 @@ export class App extends React.Component {
         console.log(data);
         this.setState({
           reviews: data,
-          id: res.data[5].courseId,
+          id: res.data[4].courseId,
         });
       })
       .catch(err => {
