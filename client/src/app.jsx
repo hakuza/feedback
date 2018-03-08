@@ -5,7 +5,7 @@ import { Feedback } from "./feedback.jsx";
 import { Featured } from "./featured_review.jsx";
 import "./styles.css";
 
-export class App extends React.Component {
+export class CourseFeedback extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -50,4 +50,4 @@ export class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<CourseFeedback />, document.getElementById("feedback"));
