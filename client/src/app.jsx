@@ -29,7 +29,7 @@ export class CourseFeedback extends React.Component {
         console.log(data);
         this.setState({
           reviews: data,
-          id: res.data[4].courseId,
+          id: res.data[2].courseId,
         });
       })
       .catch(err => {

@@ -14,16 +14,13 @@ export class Featured extends React.Component {
   }
 
   componentWillMount() {
-    console.log(this.state.haveFeatReview);
-    if (!this.state.haveFeatReview) {
-      var fiveStarReviews = this.state.reviews.filter(review => {
-        return review.content.length > 80 && review.rating === 5;
-      });
-      var index = Math.floor(Math.random() * fiveStarReviews.length);
-      this.setState({
-        reviews: fiveStarReviews[index],
-      });
-    }
+    var fiveStarReviews = this.state.reviews.filter(review => {
+      return review.content.length > 80 && review.rating === 5;
+    });
+    var index = Math.floor(Math.random() * fiveStarReviews.length);
+    this.setState({
+      reviews: fiveStarReviews[index],
+    });
   }
 
   render() {

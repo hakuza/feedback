@@ -1,4 +1,5 @@
 const rp = require("request-promise");
+var mongoose = require("mongoose");
 const Review = require("./database/index.js");
 
 async function getCourses() {
@@ -45,6 +46,9 @@ async function getCourses() {
             console.log(err);
           } else {
             console.log("saved!");
+            if (i === 99) {
+              mongoose.disconnect();
+            }
           }
         })
         .catch(err => {
