@@ -1,5 +1,5 @@
 # What image do you want to start building on?
-FROM node:v8.9.1
+FROM node:8.9.1
 
 # Make a folder in your image where your app's source code can live
 RUN mkdir -p /src/feedback
@@ -11,7 +11,7 @@ WORKDIR /src/feedback
 COPY . /src/feedback
 
 # Does your app have any dependencies that should be installed?
-RUN yarn install
+RUN npm install
 
 # What port will the container talk to the outside world with once created?
 EXPOSE 3002
