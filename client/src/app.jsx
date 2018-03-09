@@ -38,15 +38,18 @@ export class CourseFeedback extends React.Component {
   }
 
   render() {
+    let page = null;
     if (this.state.reviews === null) {
-      return <h1>Loading...</h1>;
+      page = <h1>Loading...</h1>;
+    } else {
+      page = (
+        <div>
+          <Featured reviews={this.state.reviews} id={this.state.id} />
+          <Feedback reviews={this.state.reviews} id={this.state.id} />
+        </div>
+      );
     }
-    return (
-      <div>
-        <Featured reviews={this.state.reviews} id={this.state.id} />
-        <Feedback reviews={this.state.reviews} id={this.state.id} />
-      </div>
-    );
+    return <div>{page}</div>;
   }
 }
 

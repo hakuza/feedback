@@ -12,7 +12,7 @@
     "server-dev": "nodemon server/index.js",
     "start": "webpack -d && node server/index.js",
     "seed": "node udemyAPIHelper.js",
-    "test": "jest", 
+    "test": "jest",
     "docker": "npm run seed && npm start"
   },
   "devDependencies": {
