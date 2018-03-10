@@ -15,8 +15,8 @@ export class Feedback extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      courseReview: props.reviews[props.id],
-      searchResults: props.reviews[props.id],
+      courseReview: props.reviews,
+      searchResults: props.reviews,
       input: "",
       header: "",
     };

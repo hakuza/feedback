@@ -9,7 +9,7 @@ export class Featured extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reviews: props.reviews[props.id],
+      reviews: props.reviews,
     };
   }
 

@@ -10,26 +10,19 @@ export class CourseFeedback extends React.Component {
     super(props);
     this.state = {
       reviews: null,
-      id: 0,
+      // id: 0,
     };
   }
 
   componentWillMount() {
+    let id = window.location.search || "?id=1";
+    console.log(id);
     axios
-      .get("/feedback", {
-        data: {
-          id: window.location.pathname.slice(1),
-        },
-      })
+      .get("/feedback" + id)
       .then(res => {
-        const data = {};
-        res.data.map(elem => {
-          data[elem.courseId] = elem.reviews;
-        });
-        console.log(data);
+        console.log(res.data[0].reviews);
         this.setState({
-          reviews: data,
-          id: res.data[2].courseId,
+          reviews: res.data[0].reviews,
         });
       })
       .catch(err => {
@@ -44,8 +37,8 @@ export class CourseFeedback extends React.Component {
     } else {
       page = (
         <div>
-          <Featured reviews={this.state.reviews} id={this.state.id} />
-          <Feedback reviews={this.state.reviews} id={this.state.id} />
+          <Featured reviews={this.state.reviews} />
+          <Feedback reviews={this.state.reviews} />
         </div>
       );
     }
