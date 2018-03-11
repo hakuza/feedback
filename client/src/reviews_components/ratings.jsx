@@ -64,6 +64,7 @@ export class Ratings extends React.Component {
   }
 
   render() {
+    let cursor = { cursor: "pointer" };
     return (
       <div className="ratings_container">
         <div className="avg_rating_container">
@@ -83,7 +84,7 @@ export class Ratings extends React.Component {
             id={5}
             onClick={() => this.props.click(5)}
           >
-            <div className="bar" id="fiveBar">
+            <div className="bar" id="fiveBar" style={cursor}>
               <span className="fill" id="fiveFill" style={this.state.five} />
             </div>
             <StarRatings
@@ -102,7 +103,7 @@ export class Ratings extends React.Component {
             id={4}
             onClick={() => this.props.click(4)}
           >
-            <div className="bar" id="fourBar">
+            <div className="bar" id="fourBar" style={cursor}>
               <span className="fill" id="fourFill" style={this.state.four} />
             </div>
             <StarRatings
@@ -121,7 +122,7 @@ export class Ratings extends React.Component {
             id={3}
             onClick={() => this.props.click(3)}
           >
-            <div className="bar" id="threeBar">
+            <div className="bar" id="threeBar" style={cursor}>
               <span className="fill" id="threeFill" style={this.state.three} />
             </div>
             <StarRatings
@@ -140,7 +141,7 @@ export class Ratings extends React.Component {
             id={2}
             onClick={() => this.props.click(2)}
           >
-            <div className="bar" id="twoBar">
+            <div className="bar" id="twoBar" style={cursor}>
               <span className="fill" id="twoFill" style={this.state.two} />
             </div>
             <StarRatings
@@ -159,7 +160,7 @@ export class Ratings extends React.Component {
             id={1}
             onClick={() => this.props.click(1)}
           >
-            <div className="bar" id="oneBar">
+            <div className="bar" id="oneBar" style={cursor}>
               <span className="fill" id="oneFill" style={this.state.one} />
             </div>
             <StarRatings
