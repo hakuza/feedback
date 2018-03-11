@@ -55,6 +55,7 @@ export class Flag extends React.Component {
       var style = {
         color: "#46c28e",
         border: "1px solid #46c28e",
+        cursor: "pointer",
       };
       return style;
     }
@@ -65,6 +66,7 @@ export class Flag extends React.Component {
       var style = {
         color: "#ec5252",
         border: "1px solid #ec5252",
+        cursor: "pointer",
       };
       return style;
     }
@@ -95,7 +97,9 @@ export class Flag extends React.Component {
       overlay: {
         backgroundColor: "rgba(41,48,59,0.8)",
       },
+      cursor: "pointer",
     };
+    let cursor = { cursor: "pointer" };
     return (
       <div className="flag_container">
         <div className="question">Was this review helpful?</div>
@@ -115,7 +119,7 @@ export class Flag extends React.Component {
         >
           <FontAwesomeIcon icon={faThumbsDown} />
         </div>
-        <div className="report" onClick={this.openModal}>
+        <div className="report" onClick={this.openModal} style={cursor}>
           Report
         </div>
         <Modal
