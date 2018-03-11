@@ -3,6 +3,7 @@ import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/fontawesome-free-solid";
 
 export function Search(props) {
+  let cursor = { cursor: "pointer" };
   return (
     <div id="searchContainer">
       {props.header ? (
@@ -20,7 +21,7 @@ export function Search(props) {
           onChange={props.change}
           onKeyUp={props.search}
         />
-        <div className="searchButton" onClick={props.search}>
+        <div className="searchButton" onClick={props.search} style={cursor}>
           <FontAwesomeIcon icon={faSearch} />
         </div>
       </div>
