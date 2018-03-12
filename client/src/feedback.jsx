@@ -44,7 +44,7 @@ export class Feedback extends React.Component {
           return content.match(input) || author.match(input);
         }
       });
-      let bolded = filteredReviews.map(review => Object.assign({}, review));
+      let bolded = filteredReviews.map(review => ({ ...review }));
       bolded.forEach(review => {
         let input = this.state.input;
         let re = new RegExp(input, "ig");

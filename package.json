@@ -55,6 +55,7 @@
     "@fortawesome/fontawesome-free-brands": "^5.0.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "@fortawesome/react-fontawesome": "0.0.17",
+    "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.10",
     "moment": "^2.21.0",
     "react-html-parser": "^2.0.2",
