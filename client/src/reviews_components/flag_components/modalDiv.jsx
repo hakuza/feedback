@@ -9,7 +9,7 @@ export function ModalDiv({ close }) {
         violates Terms of Service or Community Guidelines. If you have a
         question or technical issue, please contact our{" "}
         <a
-          target="blank" // opens a new tab when link is clicked
+          target="blank"
           href="https://support.udemy.com/hc/en-us?flash_digest=c746089a37590bdef80f6eabbbe529c74a14be49"
         >
           Support team here

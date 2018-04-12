@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var uniqueValidator = require("mongoose-unique-validator");
-mongoose.connect("mongodb://localhost/coursereviews");
+mongoose.connect("mongodb://database/coursereviews");
 
 var Schema = mongoose.Schema;
 

@@ -123,9 +123,9 @@ export class Flag extends React.Component {
           Report
         </div>
         <Modal
-          ariaHideApp={false} //Hides appElement
-          shouldCloseOnOverlayClick={true} // fix
-          shouldCloseOnEsc={true} // fix
+          ariaHideApp={false}
+          shouldCloseOnOverlayClick={true}
+          shouldCloseOnEsc={true}
           isOpen={this.state.modalIsOpen}
           style={style}
         >

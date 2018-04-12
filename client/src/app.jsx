@@ -10,7 +10,6 @@ export class CourseFeedback extends React.Component {
     super(props);
     this.state = {
       reviews: null,
-      // id: 0,
     };
   }
 
